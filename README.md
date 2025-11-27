@@ -77,7 +77,25 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 6:  
   Stop
 # Program:
+```asm
+#include <stdio.h>
+
+#define PI 3.14159
+
+int main() {
+    // Declare a constant variable
+    const int DAYS = 7;
+
+    // Display the values
+    printf("Value of Macro Constant PI: %.5f\n", PI);
+    printf("Value of Constant Variable DAYS: %d\n", DAYS);
+
+    return 0;
+}
+```
 # Output:
+Value of Macro Constant PI: 3.14159
+Value of Constant Variable DAYS: 7
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -101,7 +119,32 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 5:    
    Stop
 # Program:
+```asm
+#include <stdio.h>
+
+int main() {
+    // Declaration and Initialization
+    int integerVar = 42;
+    float floatVar = 3.14f;
+    double doubleVar = 12345.6789;
+    char charVar = 'Z';
+
+    // Displaying values
+    printf("Integer value: %d\n", integerVar);
+    printf("Float value: %f\n", floatVar);
+    printf("Double value: %lf\n", doubleVar);
+    printf("Character value: %c\n", charVar);
+
+    return 0;
+}
+```
 # Output:
+Integer value: 42
+Float value: 3.140000
+Double value: 12345.678900
+Character value: Z
+
+
 # Result: 
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd
@@ -140,7 +183,61 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```asm
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Input
+    printf("Enter value for a: ");
+    scanf("%d", &a);
+    printf("Enter value for b: ");
+    scanf("%d", &b);
+
+    printf("\n--- Arithmetic Operations ---\n");
+    printf("Addition (a + b): %d\n", a + b);
+    printf("Subtraction (a - b): %d\n", a - b);
+    printf("Multiplication (a * b): %d\n", a * b);
+    if(b != 0) {
+        printf("Division (a / b): %d\n", a / b);
+        printf("Remainder (a %% b): %d\n", a % b);
+    } else {
+        printf("Division and Remainder by zero is not possible.\n");
+    }
+
+    printf("\n--- Bitwise Operations ---\n");
+    printf("Bitwise AND (a & b): %d\n", a & b);
+    printf("Bitwise OR (a | b): %d\n", a | b);
+    printf("Bitwise XOR (a ^ b): %d\n", a ^ b);
+    printf("Left Shift (a << b): %d\n", a << b);
+    printf("Right Shift (a >> b): %d\n", a >> b);
+    printf("Bitwise NOT (~a): %d\n", ~a);
+    printf("Bitwise NOT (~b): %d\n", ~b);
+
+    return 0;
+}
+```
 # Output:
+Enter value for a: 10
+Enter value for b: 2
+
+--- Arithmetic Operations ---
+Addition (a + b): 12
+Subtraction (a - b): 8
+Multiplication (a * b): 20
+Division (a / b): 5
+Remainder (a % b): 0
+
+--- Bitwise Operations ---
+Bitwise AND (a & b): 2
+Bitwise OR (a | b): 10
+Bitwise XOR (a ^ b): 8
+Left Shift (a << b): 40
+Right Shift (a >> b): 2
+Bitwise NOT (~a): -11
+Bitwise NOT (~b): -3
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -185,7 +282,32 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```asm
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    // Input
+    printf("Enter any character: ");
+    scanf("%c", &ch);
+
+    // Using Ternary Operator to classify the character
+    (ch >= '0' && ch <= '9') ? printf("'%c' is a Digit.\n", ch) : 
+        ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) ? 
+            ((ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || 
+              ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') ? 
+              printf("'%c' is a Vowel.\n", ch) : printf("'%c' is a Consonant.\n", ch)) 
+        : printf("'%c' is a Special Symbol.\n", ch);
+
+    return 0;
+}
+```
 # Output:
+Enter any character: E
+'E' is a Vowel.
+Enter any character: 7
+'7' is a Digit.
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
